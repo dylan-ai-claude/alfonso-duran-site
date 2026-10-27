@@ -69,3 +69,13 @@ Edit `kit.items` in `src/data/site.json`. Each item has a name, a project to sho
 ## Putting it online
 
 The `dist/` folder after `npm run build` is the whole site. Drag it onto Netlify, or connect the repo to Vercel or Netlify (build command `npm run build`, output `dist`). Point `alfonso-duran.com` (or `alfonsoduran.com`) at it from the registrar.
+
+### Serving from a sub-folder
+
+To host the site under a path (e.g. `example.com/website`), build with the base set:
+
+```bash
+SITE_BASE=/website npm run build
+```
+
+Image and link paths in `site.json` and the project files stay written from the root (`/work/...`); the site adds the base for you.

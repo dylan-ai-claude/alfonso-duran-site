@@ -56,7 +56,7 @@ function renderKit() {
   store.set(KIT_KEY, picked);
   if (dock && dockLabel) {
     dockLabel.textContent = picked.length ? `Email my kit (${picked.length})` : dockDefault;
-    dock.setAttribute('href', picked.length ? mailFor(picked) : (kit ? '#contact' : '/#contact'));
+    dock.setAttribute('href', picked.length ? mailFor(picked) : (kit ? '#contact' : `${document.body.dataset.home || '/'}#contact`));
   }
   if (!kit) return;
   kit.querySelectorAll('[data-kit-toggle]').forEach((b) => b.setAttribute('aria-pressed', String(picked.includes(b.dataset.name))));

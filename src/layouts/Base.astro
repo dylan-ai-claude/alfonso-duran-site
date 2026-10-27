@@ -1,4 +1,5 @@
 ---
+import { u } from '../lib/url';
 import '../styles/global.css';
 import site from '../data/site.json';
 import Nav from '../components/Nav.astro';
@@ -21,9 +22,9 @@ const { title = site.seo.title, description = site.seo.description, image = site
     <meta name="description" content={description} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
+    <meta property="og:image" content={u(image)} />
     <meta name="theme-color" content="#ffffff" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href={u('/favicon.svg')} type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -32,14 +33,14 @@ const { title = site.seo.title, description = site.seo.description, image = site
     />
     <script is:inline>document.documentElement.classList.add('js');</script>
   </head>
-  <body>
+  <body data-home={u('/')}>
     <a class="skip" href="#main">Skip to content</a>
     <Nav />
     <main id="main">
       <slot />
     </main>
     <Footer />
-    <a class="dock button" href="/#contact" data-dock>
+    <a class="dock button" href={u('/#contact')} data-dock>
       <span data-dock-label>{site.hero.action}</span>
     </a>
     <script>

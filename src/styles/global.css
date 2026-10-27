@@ -113,6 +113,7 @@ p + p { margin-top: 0.9em; }
 @media (max-width: 50em) {
   .hero__stage { --s: min(78vw, 44svh); --top: max(30svh, 9.5rem); }
   .hero__pic { --z0: 1.08; --shift: -12vw; }
+  .hero__pic img { object-position: 74% 50%; }
   .hero__title { top: calc(var(--bar) + 1rem); bottom: auto; max-width: none; font-size: 10vw; }
   .hero__aside { top: calc(var(--top) + var(--s) + 1.25rem); bottom: auto; left: var(--margin); width: auto; gap: 1rem; }
   .hero__aside p { font-size: var(--step-lead); line-height: 1.35; }

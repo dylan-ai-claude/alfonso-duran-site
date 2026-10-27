@@ -1,4 +1,5 @@
 ---
+import { u } from '../lib/url';
 import site from '../data/site.json';
 const { kit, email, phoneLink } = site;
 const subject = encodeURIComponent('New project');
@@ -9,7 +10,7 @@ const subject = encodeURIComponent('New project');
   <div class="kit__pic" aria-hidden="true">
     {
       kit.items.map((item, i) => (
-        <img src={item.image} alt="" width="880" height="660" loading="lazy" class={i === 0 ? 'is-on' : ''} data-kit-pic />
+        <img src={u(item.image)} alt="" width="880" height="660" loading="lazy" class={i === 0 ? 'is-on' : ''} data-kit-pic />
       ))
     }
   </div>
@@ -30,7 +31,7 @@ const subject = encodeURIComponent('New project');
             <div class="kit__more">
               <div>
                 <p>{item.text}</p>
-                <a class="link-plain" href={item.href}>
+                <a class="link-plain" href={u(item.href)}>
                   See it for {item.example}
                 </a>
               </div>

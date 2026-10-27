@@ -1,17 +1,18 @@
 ---
+import { u } from '../lib/url';
 import site from '../data/site.json';
 const links = [
-  { label: 'Work', href: '/#work' },
-  { label: 'Services', href: '/#kit' },
-  { label: 'About', href: '/#about' },
+  { label: 'Work', href: u('/#work') },
+  { label: 'Services', href: u('/#kit') },
+  { label: 'About', href: u('/#about') },
 ];
 ---
 
 <header class="bar" data-bar>
-  <a class="bar__mark" href="/" aria-label={`${site.name}, home`}>{site.wordmark}</a>
+  <a class="bar__mark" href={u('/')} aria-label={`${site.name}, home`}>{site.wordmark}</a>
   <nav class="bar__links" aria-label="Main">
     {links.map((l) => <a class="link" href={l.href}>{l.label}</a>)}
-    <a class="button button--small" href="/#contact">{site.hero.action}</a>
+    <a class="button button--small" href={u('/#contact')}>{site.hero.action}</a>
   </nav>
   <button class="bar__menu" type="button" aria-expanded="false" aria-controls="sheet" data-menu>Menu</button>
 </header>
@@ -20,7 +21,7 @@ const links = [
   <nav aria-label="Menu">
     <ul class="sheet__list">
       {links.map((l) => <li><a href={l.href} data-close>{l.label}</a></li>)}
-      <li><a href="/#contact" data-close>Contact</a></li>
+      <li><a href={u('/#contact')} data-close>Contact</a></li>
     </ul>
   </nav>
   <div class="sheet__foot">
