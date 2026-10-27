@@ -62,6 +62,8 @@
   },
 
   "links": [
+    { "label": "Instagram", "href": "https://www.instagram.com/alfonsoduran/" },
+    { "label": "Durán Studio on Instagram", "href": "https://www.instagram.com/duranstudio/" },
     { "label": "Behance", "href": "https://www.behance.net/alfonsoduran" },
     { "label": "Creative Market", "href": "https://creativemarket.com/alfonsoduran" },
     { "label": "Vimeo", "href": "https://vimeo.com/alfonsoduran" }

@@ -284,6 +284,7 @@ p + p { margin-top: 0.9em; }
 .foot__cols h2 { font-family: var(--font-text); font-weight: 500; font-size: var(--step-small); color: #4a4a4a; margin-bottom: 0.5rem; }
 .foot__cols li a { display: inline-block; padding-block: 0.3rem; }
 .foot__legal { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; font-size: var(--step-small); }
+.foot__credit { margin-top: 1rem; color: var(--muted); font-size: var(--step-small); }
 @media (max-width: 50em) {
   .foot__row { display: block; }
   .foot__places { margin-bottom: 3rem; }
