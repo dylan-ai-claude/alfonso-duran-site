@@ -1,0 +1,44 @@
+---
+import { getCollection } from 'astro:content';
+import site from '../data/site.json';
+const work = (await getCollection('work', ({ data }) => data.featured)).sort((a, b) => a.data.order - b.data.order).slice(0, 4);
+const year = new Date().getFullYear();
+---
+
+<footer class="foot">
+  <div class="foot__row">
+    <ul class="foot__places">
+      <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
+      <li><a href={`tel:${site.phoneLink}`}>{site.phone}</a></li>
+      <li><span>{site.city}</span></li>
+    </ul>
+    <div class="foot__cols">
+      <div>
+        <h2>Work</h2>
+        <ul>
+          {work.map((p) => <li><a class="link" href={`/work/${p.id}/`}>{p.data.title}</a></li>)}
+          <li><a class="link" href="/#work">All projects</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Studio</h2>
+        <ul>
+          <li><a class="link" href="/#kit">Services</a></li>
+          <li><a class="link" href="/#about">About</a></li>
+          <li><a class="link" href="/#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Elsewhere</h2>
+        <ul>
+          {site.links.map((l) => <li><a class="link" href={l.href}>{l.label}</a></li>)}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <p class="foot__mark" data-fit-mark aria-hidden="true">{site.wordmark}</p>
+  <div class="foot__legal">
+    <p>© {year} {site.studio}</p>
+    <a class="link" href="#main">Back to top</a>
+  </div>
+</footer>

@@ -1,0 +1,23 @@
+---
+import site from '../data/site.json';
+const [user, domain] = site.email.split('@');
+---
+
+<!-- The email address, set as big as the screen allows. -->
+<section class="contact" id="contact" aria-labelledby="contact-title" data-contact>
+  <h2 class="contact__lead" id="contact-title" data-reveal>{site.contact.sentence}</h2>
+  <a class="contact__mail" href={`mailto:${site.email}?subject=${encodeURIComponent('New project')}`} data-fit>
+    <span>{user}@</span><span>{domain}</span>
+  </a>
+  <div class="contact__foot">
+    <p>
+      <a class="link" href={`tel:${site.phoneLink}`}>{site.phone}</a>
+      <a class="link" href={`sms:${site.phoneLink}`}>Text</a>
+      {site.whatsapp && <a class="link" href={`https://wa.me/${site.whatsapp}`}>WhatsApp</a>}
+      <span>{site.city}</span>
+    </p>
+    <p>
+      {site.links.map((l) => <a class="link" href={l.href}>{l.label}</a>)}
+    </p>
+  </div>
+</section>

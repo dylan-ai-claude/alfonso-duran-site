@@ -1,0 +1,30 @@
+---
+import site from '../data/site.json';
+const links = [
+  { label: 'Work', href: '/#work' },
+  { label: 'Services', href: '/#kit' },
+  { label: 'About', href: '/#about' },
+];
+---
+
+<header class="bar" data-bar>
+  <a class="bar__mark" href="/" aria-label={`${site.name}, home`}>{site.wordmark}</a>
+  <nav class="bar__links" aria-label="Main">
+    {links.map((l) => <a class="link" href={l.href}>{l.label}</a>)}
+    <a class="button button--small" href="/#contact">{site.hero.action}</a>
+  </nav>
+  <button class="bar__menu" type="button" aria-expanded="false" aria-controls="sheet" data-menu>Menu</button>
+</header>
+
+<div class="sheet" id="sheet" data-sheet hidden>
+  <nav aria-label="Menu">
+    <ul class="sheet__list">
+      {links.map((l) => <li><a href={l.href} data-close>{l.label}</a></li>)}
+      <li><a href="/#contact" data-close>Contact</a></li>
+    </ul>
+  </nav>
+  <div class="sheet__foot">
+    <a class="button" href={`mailto:${site.email}`}>{site.email}</a>
+    <a class="link-plain" href={`tel:${site.phoneLink}`}>{site.phone}</a>
+  </div>
+</div>

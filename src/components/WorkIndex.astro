@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+const all = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<!-- Every project as a list; pointing at a row opens its cover beside it. -->
+<section class="index wrap" aria-labelledby="index-title">
+  <div class="index__head">
+    <h2 class="head" id="index-title" data-reveal>Every project</h2>
+    <p class="index__count" data-reveal style="--i:1">
+      {all.length} projects for bars, restaurants, clubs and brands in Miami, New York, New Jersey and Las Vegas.
+    </p>
+  </div>
+  <ul class="index__list" data-index>
+    {
+      all.map((p, i) => (
+        <li data-reveal style={`--i:${Math.min(i, 6)}`}>
+          <a class="index__row" href={`/work/${p.id}/`} data-preview={p.data.cover}>
+            <img class="index__thumb" src={p.data.cover} alt="" width="300" height="420" loading="lazy" />
+            <span class="index__name">{p.data.title}</span>
+            <span class="index__meta">
+              {p.data.place} · {p.data.disciplines.slice(0, 2).join(', ')}
+            </span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  <div class="index__frame is-open" aria-hidden="true" data-frame><img src={all[0].data.cover} alt="" width="300" height="420" loading="lazy" /></div>
+</section>

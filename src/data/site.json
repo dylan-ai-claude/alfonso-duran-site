@@ -1,0 +1,69 @@
+{
+  "name": "Alfonso Durán",
+  "studio": "durán design studio",
+  "wordmark": "DURÁN",
+  "role": "Graphic designer & illustrator",
+  "city": "Miami, Florida",
+  "email": "a@alfonso-duran.com",
+  "phone": "305 608 7269",
+  "phoneLink": "+13056087269",
+  "whatsapp": "",
+
+  "seo": {
+    "title": "Alfonso Durán: branding for bars & restaurants, Miami",
+    "description": "Alfonso Durán is a Miami graphic designer: logos, menus, coasters, merch, signage and flyers for bars, restaurants, clubs and food brands."
+  },
+
+  "hero": {
+    "headline": ["Alfonso", "Durán"],
+    "sentence": "Logos, menus, coasters, shirts and walls for bars, restaurants and clubs, from Miami Beach to Las Vegas.",
+    "action": "Start a project",
+    "image": "/img/rokbar-room.jpg",
+    "imageAlt": "Inside Rokbar, Miami Beach: hot-pink room with a black wall lettered with rock song titles"
+  },
+
+  "gallery": {
+    "intro": "Most of what I make doesn't live on a screen. It's on a brick wall outside, on the bar top, on a shelf behind the bartender, or in somebody's pocket on the way home.",
+    "frames": [
+      { "src": "/work/foxhole-bar-miami-beach/posters2.jpg", "caption": "Foxhole posters, Miami Beach" },
+      { "src": "/work/drunken-dragon-miami-beach/sake001.jpg", "caption": "Drunken Dragon house sake labels" },
+      { "src": "/work/miami-fine-arts-academy/interior.jpg", "caption": "Miami Fine Arts Academy studio wall" }
+    ]
+  },
+
+  "kit": {
+    "heading": "Build your kit",
+    "intro": "Tap what your place needs. I'll write back with how I'd do it.",
+    "items": [
+      { "name": "Logo & identity", "example": "Foxhole", "href": "/work/foxhole-bar-miami-beach/", "image": "/work/foxhole-bar-miami-beach/foxhole_logo.jpg", "text": "A mark that works on a sign, a stamp and a shot glass. Wordmark, symbol and the rules for using them." },
+      { "name": "Menus", "example": "Drunken Dragon", "href": "/work/drunken-dragon-miami-beach/", "image": "/work/drunken-dragon-miami-beach/menu.jpg", "text": "Food, drink and cocktail menus that are easy to read in a dark room and easy to update." },
+      { "name": "Coasters & matchbooks", "example": "Rokbar", "href": "/work/rokbar-miami-beach/", "image": "/work/rokbar-miami-beach/coasters3.jpg", "text": "The small things people pick up, pocket and post. Cheap to print and they go home with your guests." },
+      { "name": "T-shirts & merch", "example": "Foxhole", "href": "/work/foxhole-bar-miami-beach/", "image": "/work/foxhole-bar-miami-beach/tshirt2.jpg", "text": "Staff tees, hats and merch people actually want to wear outside the bar." },
+      { "name": "Posters & event flyers", "example": "Mynt Lounge", "href": "/work/mynt-lounge-miami-beach/", "image": "/work/mynt-lounge-miami-beach/havana2.jpg", "text": "Weekly flyers, DJ nights and special events, for print and for Instagram, on deadline." },
+      { "name": "Signage & walls", "example": "Rokbar", "href": "/work/rokbar-miami-beach/", "image": "/img/rokbar-room-2.jpg", "text": "Exterior signs, lettered walls and murals that make the room itself part of the brand." },
+      { "name": "Packaging & labels", "example": "Gimmee Jimmy's", "href": "/work/gimmee-jimmys-cookies-new-jersey/", "image": "/work/gimmee-jimmys-cookies-new-jersey/boxes.jpg", "text": "Boxes, bottle labels, stickers and shipping cartons for food and drink brands." },
+      { "name": "Cards & stationery", "example": "Vittorio Massi", "href": "/work/vittorio-massi/", "image": "/work/vittorio-massi/paper.jpg", "text": "Business cards, VIP cards, letterhead and everything with your address on it." }
+    ]
+  },
+
+  "about": {
+    "heading": ["Durán", "studio"],
+    "bio": "I'm Alfonso, a graphic designer and illustrator in Miami. For years I've drawn the logos, menus, coasters, posters and walls for bars, clubs and restaurants on Miami Beach, and for brands from New York to Las Vegas. I draw a lot by hand, I letter a lot by hand, and I like work that ends up in the real world. I live in Miami with my wife and our two kids.",
+    "pieces": [
+      { "src": "/work/misc-work/posters1.jpg", "title": "Promo posters", "kind": "Personal work", "text": "Self-promotion posters, screen-printed and pasted up around the studio." },
+      { "src": "/work/misc-work/duffys.jpg", "title": "Local watering hole", "kind": "Photography", "text": "The bars I design for look different at two in the morning. I go and look." },
+      { "src": "/work/misc-work/luna.jpg", "title": "Luna", "kind": "Photography", "text": "Family comes first, and usually ends up in front of the camera." },
+      { "src": "/work/misc-work/taxi.jpg", "title": "Taxi", "kind": "Personal work", "text": "A study in one yellow cab: details, colour and a lot of chrome." }
+    ]
+  },
+
+  "contact": {
+    "sentence": "Opening a bar, a restaurant or a brand? Tell me about it."
+  },
+
+  "links": [
+    { "label": "Behance", "href": "https://www.behance.net/alfonsoduran" },
+    { "label": "Creative Market", "href": "https://creativemarket.com/alfonsoduran" },
+    { "label": "Vimeo", "href": "https://vimeo.com/alfonsoduran" }
+  ]
+}

@@ -1,0 +1,30 @@
+---
+import site from '../data/site.json';
+const { about } = site;
+---
+
+<!-- The heading holds still while his own work passes behind it. -->
+<section class="about" id="about" aria-labelledby="about-title">
+  <div class="about__pin">
+    <h2 class="about__title" id="about-title">
+      {about.heading.map((w) => <span>{w}</span>)}
+    </h2>
+  </div>
+  <div class="about__run wrap">
+    <div class="about__bio" data-reveal>
+      <p>{about.bio}</p>
+    </div>
+    {
+      about.pieces.map((piece, i) => (
+        <figure class={`about__piece ${i % 2 ? 'is-right' : 'is-left'}`} data-reveal>
+          <img src={piece.src} alt={piece.title} width="880" height="660" loading="lazy" />
+          <figcaption>
+            <strong>{piece.title}</strong>
+            <span class="muted">{piece.kind}</span>
+            <span>{piece.text}</span>
+          </figcaption>
+        </figure>
+      ))
+    }
+  </div>
+</section>

@@ -1,0 +1,22 @@
+---
+import site from '../data/site.json';
+const { gallery } = site;
+---
+
+<!-- Three full-screen pictures; each slides up over the one before. -->
+<section class="gallery" aria-labelledby="gallery-title">
+  <div class="gallery__lead wrap">
+    <h2 class="head" id="gallery-title" data-reveal>Off the screen</h2>
+    <p data-reveal style="--i:1">{gallery.intro}</p>
+  </div>
+  <div class="gallery__run">
+    {
+      gallery.frames.map((f) => (
+        <figure class="gallery__frame">
+          <img src={f.src} alt={f.caption} width="880" height="660" loading="lazy" />
+          <figcaption>{f.caption}</figcaption>
+        </figure>
+      ))
+    }
+  </div>
+</section>

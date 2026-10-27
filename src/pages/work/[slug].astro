@@ -1,0 +1,60 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Contact from '../../components/Contact.astro';
+import site from '../../data/site.json';
+
+export async function getStaticPaths() {
+  const all = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
+  return all.map((entry, i) => ({
+    params: { slug: entry.id },
+    props: { entry, next: all[(i + 1) % all.length] },
+  }));
+}
+
+const { entry, next } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+---
+
+<Base title={`${d.title}: ${site.name}`} description={d.summary} image={d.cover}>
+  <article class="case wrap">
+    <header class="case__intro">
+      <a class="case__back link" href="/#work"><span aria-hidden="true">←</span> All work</a>
+      <h1 class="head" data-reveal>{d.title}</h1>
+      <p class="case__lead" data-reveal style="--i:1">{d.summary}</p>
+      <div class="case__text">
+        <p class="case__meta" data-reveal style="--i:2">
+          {d.client && <span>For {d.client} · </span>}{d.place} · {d.disciplines.join(', ')}
+        </p>
+        <div class="case__body" data-reveal style="--i:3">
+          <Content />
+        </div>
+        <a class="button" href="#contact" data-reveal style="--i:4">Start a project like this</a>
+      </div>
+    </header>
+    <figure class="case__hero">
+      <img src={d.hero} alt={`${d.title}`} width="880" height="660" fetchpriority="high" />
+    </figure>
+    <div class={`case__pics${d.images.length > 12 ? ' case__pics--many' : ''}`}>
+      {
+        d.images.filter((im) => im.src !== d.hero).map((im, i) => (
+          <figure class="case__pic" data-reveal style={`--i:${i % 2}`}>
+            <img src={im.src} alt={im.caption ? `${d.title}: ${im.caption}` : d.title} width="880" height="660" loading={i < 2 ? 'eager' : 'lazy'} />
+            {im.caption && <figcaption>{im.caption}</figcaption>}
+          </figure>
+        ))
+      }
+    </div>
+  </article>
+
+  <a class="next wrap" href={`/work/${next.id}/`} data-dock-stop>
+    <img class="next__pic" src={next.data.cover} alt="" width="300" height="420" loading="lazy" data-reveal />
+    <span class="next__text">
+      <h2 class="head" data-reveal>{next.data.title}</h2>
+      <span class="next__sum" data-reveal style="--i:1">Next project: {next.data.summary}</span>
+    </span>
+  </a>
+
+  <Contact />
+</Base>

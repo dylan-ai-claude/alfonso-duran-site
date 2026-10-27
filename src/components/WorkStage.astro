@@ -1,0 +1,35 @@
+---
+import { getCollection } from 'astro:content';
+const featured = (await getCollection('work', ({ data }) => data.featured && data.stage)).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+---
+
+<!-- Pinned stage: each project's two pictures pass in opposite directions and its name tears at the seam. -->
+<section class="stage" id="work" data-stage style={`--n:${featured.length}`} aria-labelledby="work-title">
+  <div class="stage__pin">
+    <h2 class="stage__title" id="work-title">Selected work</h2>
+    {
+      featured.map((p, i) => (
+        <article class="stage__item" data-stage-item style={`--d:${i};--a:${i};--ink:${p.data.stage!.ink}`}>
+          <div class="stage__pane stage__pane--l">
+            <img src={p.data.stage!.left} alt="" width="880" height="660" loading={i ? 'lazy' : 'eager'} />
+          </div>
+          <div class="stage__pane stage__pane--r">
+            <img src={p.data.stage!.right} alt="" width="880" height="660" loading="lazy" />
+          </div>
+          <h3 class="stage__name">
+            <span class="stage__half stage__half--l">{p.data.stageTitle ?? p.data.title}</span>
+            <span class="stage__half stage__half--r" aria-hidden="true">{p.data.stageTitle ?? p.data.title}</span>
+          </h3>
+          <div class="stage__meta">
+            <p>{p.data.disciplines.join(', ')} · {p.data.place}</p>
+            <a class="stage__link" href={`/work/${p.id}/`}>
+              See the project<span class="sr-only">: {p.data.title}</span> <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>

@@ -1,0 +1,52 @@
+---
+import site from '../data/site.json';
+const { kit, email, phoneLink } = site;
+const subject = encodeURIComponent('New project');
+---
+
+<!-- "Build your kit": the services list. Tapping a row adds it to a list that becomes a pre-written email or text. -->
+<section class="kit wrap" id="kit" aria-labelledby="kit-title" data-kit data-email={email} data-phone={phoneLink}>
+  <div class="kit__pic" aria-hidden="true">
+    {
+      kit.items.map((item, i) => (
+        <img src={item.image} alt="" width="880" height="660" loading="lazy" class={i === 0 ? 'is-on' : ''} data-kit-pic />
+      ))
+    }
+  </div>
+  <div class="kit__body">
+    <h2 class="head" id="kit-title" data-reveal>{kit.heading}</h2>
+    <p class="kit__intro" data-reveal style="--i:1">{kit.intro}</p>
+    <ul class="kit__list">
+      {
+        kit.items.map((item, i) => (
+          <li class={`kit__row${i === 0 ? ' is-active' : ''}`} data-kit-row data-reveal style={`--i:${Math.min(i + 2, 8)}`}>
+            <button class="kit__toggle" type="button" aria-pressed="false" data-kit-toggle data-name={item.name}>
+              <span class="kit__name">{item.name}</span>
+              <span class="kit__state" aria-hidden="true">
+                <span class="kit__add">Add</span>
+                <span class="kit__added">Added</span>
+              </span>
+            </button>
+            <div class="kit__more">
+              <div>
+                <p>{item.text}</p>
+                <a class="link-plain" href={item.href}>
+                  See it for {item.example}
+                </a>
+              </div>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+    <div class="kit__send" data-kit-send>
+      <p class="kit__summary" aria-live="polite" data-kit-summary>
+        Nothing added yet. Tap what you need, or just write.
+      </p>
+      <div class="kit__actions">
+        <a class="button" href={`mailto:${email}?subject=${subject}`} data-kit-mail>Email Alfonso</a>
+        <a class="button button--quiet" href={`sms:${phoneLink}`} data-kit-sms>Send a text</a>
+      </div>
+    </div>
+  </div>
+</section>

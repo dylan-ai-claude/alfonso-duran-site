@@ -1,0 +1,20 @@
+---
+import site from '../data/site.json';
+const { hero } = site;
+---
+
+<!-- The picture sits behind a coaster-shaped window that opens to the whole screen as you scroll. -->
+<section class="hero" data-hero aria-labelledby="hero-title">
+  <div class="hero__stage">
+    <div class="hero__pic">
+      <img src={hero.image} alt={hero.imageAlt} width="820" height="522" fetchpriority="high" />
+    </div>
+    <h1 class="hero__title" id="hero-title">
+      {hero.headline.map((line, i) => <span class="line"><span data-line style={`--i:${i}`}>{line}</span></span>)}
+    </h1>
+    <div class="hero__aside">
+      <p data-rise style="--i:2">{hero.sentence}</p>
+      <a class="button" href="#contact" data-rise style="--i:3">{hero.action}</a>
+    </div>
+  </div>
+</section>
