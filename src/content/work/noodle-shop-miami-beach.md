@@ -3,7 +3,7 @@ title: "The Noodle Shop"
 place: "Miami Beach"
 disciplines: ["Identity", "Print"]
 order: 10
-summary: "A worn, arched wordmark with an 'est. 1926' feel, on menus and tees."
+summary: "A worn, arched wordmark with an “est. 1926” feel, on menus and tees."
 cover: "/work/noodle-shop-miami-beach/noodle_image.jpg"
 hero: "/work/noodle-shop-miami-beach/noodle_menu.jpg"
 images:

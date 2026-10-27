@@ -20,7 +20,7 @@ npm run preview    # serves dist/ to check the build
 | Name, email, phone, city, bio, hero text, services list, links | `src/data/site.json` |
 | A project (text, pictures, captions) | `src/content/work/<project>.md` |
 | Pictures | `public/work/<project>/` (and `public/img/` for the hero) |
-| Colours, fonts, sizes | the top of `src/styles/global.css` (`:root`) |
+| Colors, fonts, sizes | the top of `src/styles/global.css` (`:root`) |
 | Page layout | `src/components/*.astro` (one file per homepage section) |
 
 ### Add a project
@@ -41,7 +41,7 @@ featured: true                 # optional: put it on the big homepage stage
 stage:                         # only needed when featured: true
   left: "/work/my-new-project/whole.jpg"
   right: "/work/my-new-project/detail.jpg"
-  ink: "#ffffff"               # colour of the giant title on the stage
+  ink: "#ffffff"               # color of the giant title on the stage
 images:
   - src: "/work/my-new-project/logo.jpg"
     caption: "logo"

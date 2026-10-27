@@ -23,4 +23,4 @@ images:
   - src: "/work/gimmee-jimmys-cookies-new-jersey/boxes_cardboard3.jpg"
 ---
 
-A badge-style identity for a gourmet cookie company. The sticker-bomb pattern wraps the gift boxes and the delivery truck, and a stamp version prints on the brown shipping cartons, business cards and tees.
+A badge-style identity for a gourmet cookie company. The sticker-bomb pattern wraps the gift boxes and the delivery truck, and a stamp version is printed on the brown shipping cartons, business cards and tees.

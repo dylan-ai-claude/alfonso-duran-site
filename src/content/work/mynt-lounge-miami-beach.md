@@ -43,4 +43,4 @@ images:
   - src: "/work/mynt-lounge-miami-beach/firereason.jpg"
 ---
 
-A run of event flyers for Mynt Lounge on Collins Avenue, from New Year's Eve 2009 to 2014: international DJs, residents, swim week parties and Cinco de Mayo. A new headliner, a new type treatment, the same deadline.
+A run of event flyers for Mynt Lounge on Collins Avenue, from New Year's Eve 2009 to 2014: international DJs, residents, Swim Week parties and Cinco de Mayo. A new headliner, a new type treatment, the same deadline.

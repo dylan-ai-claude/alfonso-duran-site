@@ -16,4 +16,4 @@ images:
   - src: "/work/miami-fine-arts-academy/wallpaper2.jpg"
 ---
 
-An identity for a music, art and dance school. The letters M, F and A tumble in four bright colours and break apart into a pattern used on the stationery, flyers, tees and totes, and painted across the studio wall.
+An identity for a music, art and dance school. The letters M, F and A tumble in four bright colors and break apart into a pattern used on the stationery, flyers, tees and totes, and painted across the studio wall.

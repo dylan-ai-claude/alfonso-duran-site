@@ -3,7 +3,7 @@ title: "Logos & marks"
 place: "Various"
 disciplines: ["Identity"]
 order: 13
-summary: "A drawer of marks, some used every day, some never were."
+summary: "A drawer of marks: some used every day, some never used at all."
 cover: "/work/logos/featuredimage.jpg"
 hero: "/work/logos/logos.jpg"
 images:

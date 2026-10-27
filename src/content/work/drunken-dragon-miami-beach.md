@@ -13,7 +13,7 @@ stage:
   ink: "#ffe14d"
 images:
   - src: "/work/drunken-dragon-miami-beach/logo1.jpg"
-    caption: "logo (illustration by darren brass)"
+    caption: "Logo (illustration by Darren Brass)"
   - src: "/work/drunken-dragon-miami-beach/menu.jpg"
   - src: "/work/drunken-dragon-miami-beach/drink.jpg"
   - src: "/work/drunken-dragon-miami-beach/cocktails.jpg"

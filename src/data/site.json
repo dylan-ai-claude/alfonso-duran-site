@@ -37,7 +37,7 @@
     "items": [
       { "name": "Logo & identity", "example": "Foxhole", "href": "/work/foxhole-bar-miami-beach/", "image": "/work/foxhole-bar-miami-beach/foxhole_logo.jpg", "text": "A mark that works on a sign, a stamp and a shot glass. Wordmark, symbol and the rules for using them." },
       { "name": "Menus", "example": "Drunken Dragon", "href": "/work/drunken-dragon-miami-beach/", "image": "/work/drunken-dragon-miami-beach/menu.jpg", "text": "Food, drink and cocktail menus that are easy to read in a dark room and easy to update." },
-      { "name": "Coasters & matchbooks", "example": "Rokbar", "href": "/work/rokbar-miami-beach/", "image": "/work/rokbar-miami-beach/coasters3.jpg", "text": "The small things people pick up, pocket and post. Cheap to print and they go home with your guests." },
+      { "name": "Coasters & matchbooks", "example": "Rokbar", "href": "/work/rokbar-miami-beach/", "image": "/work/rokbar-miami-beach/coasters3.jpg", "text": "The small things people pick up, pocket and post. Cheap to print, and they go home with your guests." },
       { "name": "T-shirts & merch", "example": "Foxhole", "href": "/work/foxhole-bar-miami-beach/", "image": "/work/foxhole-bar-miami-beach/tshirt2.jpg", "text": "Staff tees, hats and merch people actually want to wear outside the bar." },
       { "name": "Posters & event flyers", "example": "Mynt Lounge", "href": "/work/mynt-lounge-miami-beach/", "image": "/work/mynt-lounge-miami-beach/havana2.jpg", "text": "Weekly flyers, DJ nights and special events, for print and for Instagram, on deadline." },
       { "name": "Signage & walls", "example": "Rokbar", "href": "/work/rokbar-miami-beach/", "image": "/img/rokbar-room-2.jpg", "text": "Exterior signs, lettered walls and murals that make the room itself part of the brand." },
@@ -53,12 +53,12 @@
       { "src": "/work/misc-work/posters1.jpg", "title": "Promo posters", "kind": "Personal work", "text": "Self-promotion posters, screen-printed and pasted up around the studio." },
       { "src": "/work/misc-work/duffys.jpg", "title": "Local watering hole", "kind": "Photography", "text": "The bars I design for look different at two in the morning. I go and look." },
       { "src": "/work/misc-work/luna.jpg", "title": "Luna", "kind": "Photography", "text": "Family comes first, and usually ends up in front of the camera." },
-      { "src": "/work/misc-work/taxi.jpg", "title": "Taxi", "kind": "Personal work", "text": "A study in one yellow cab: details, colour and a lot of chrome." }
+      { "src": "/work/misc-work/taxi.jpg", "title": "Taxi", "kind": "Personal work", "text": "A study in one yellow cab: details, color and a lot of chrome." }
     ]
   },
 
   "contact": {
-    "sentence": "Opening a bar, a restaurant or a brand? Tell me about it."
+    "sentence": "Opening a bar or restaurant, or launching a brand? Tell me about it."
   },
 
   "links": [
